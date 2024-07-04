@@ -11,7 +11,11 @@ const ProductList = ({ products }: Props) => {
     const dispatch = useDispatch<AppDispatch>();
 
     const handleAddToCart = (product: Product) => {
-        const newProduct = { ...product, quantity: 1 };
+        const newProduct = {
+            ...product,
+            quantity: 1,
+            totalPrices: product.price,
+        };
         dispatch(addItem(newProduct));
     };
 
