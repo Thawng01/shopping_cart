@@ -15,12 +15,12 @@ const Cart = ({ onDismiss }: Props) => {
     return (
         <>
             <Overlay onClick={onDismiss} />
-            <div className=" w-[350px] fixed right-0 bg-white h-full z-40">
-                <h2 className="text-xl fixed font-semibold bg-white w-full px-4 py-3">
+            <div className="w-[350px] fixed right-0 bg-white h-full z-40">
+                <h2 className="text-xl fixed font-semibold bg-white w-full px-4 py-3 border-b">
                     Cart
                 </h2>
                 {cart.length === 0 ? (
-                    <p>No items in cart</p>
+                    <p className="text-center pt-14">No items in cart</p>
                 ) : (
                     <div className="overflow-auto h-[calc(100vh-110px)] mt-12">
                         {cart.map((item: TCart) => (
