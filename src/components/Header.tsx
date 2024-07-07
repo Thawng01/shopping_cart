@@ -22,7 +22,7 @@ const Header = () => {
                         className="relative flex items-center"
                         onClick={() => setShowCart(true)}
                     >
-                        <BiCart size={28} />
+                        <BiCart size={28} className="cursor-pointer" />
                         {cartItemCount > 0 && (
                             <span className="absolute -top-3 -right-3 bg-red-500 text-white text-xs rounded-full px-2 py-1">
                                 {cartItemCount}
